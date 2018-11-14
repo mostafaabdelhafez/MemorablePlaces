@@ -13,6 +13,11 @@
 		06D5AE6F219A385600054883 /* MemorablePlaces.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE6D219A385600054883 /* MemorablePlaces.xcdatamodeld */; };
 		06D5AE71219A385700054883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D5AE70219A385700054883 /* Assets.xcassets */; };
 		06D5AE74219A385700054883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D5AE72219A385700054883 /* LaunchScreen.storyboard */; };
+		06D5AE7F219A388100054883 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D5AE7E219A388100054883 /* MapKit.framework */; };
+		06D5AE82219A659700054883 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE81219A659700054883 /* PlacesVC.swift */; };
+		06D5AE85219A683200054883 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE84219A683200054883 /* Constants.swift */; };
+		06D5AE87219A924A00054883 /* PassingDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE86219A924A00054883 /* PassingDate.swift */; };
+		06D6C978219B69CE00D37A79 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6C977219B69CE00D37A79 /* PlacesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		06D5AE70219A385700054883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06D5AE73219A385700054883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06D5AE75219A385700054883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06D5AE7E219A388100054883 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		06D5AE81219A659700054883 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
+		06D5AE84219A683200054883 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		06D5AE86219A924A00054883 /* PassingDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassingDate.swift; sourceTree = "<group>"; };
+		06D6C977219B69CE00D37A79 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D5AE7F219A388100054883 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,7 @@
 			children = (
 				06D5AE65219A385600054883 /* MemorablePlaces */,
 				06D5AE64219A385600054883 /* Products */,
+				06D5AE7B219A387F00054883 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +68,9 @@
 		06D5AE65219A385600054883 /* MemorablePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				06D5AE83219A682400054883 /* utilities */,
+				06D5AE80219A657C00054883 /* Controllers */,
 				06D5AE66219A385600054883 /* AppDelegate.swift */,
-				06D5AE68219A385600054883 /* ViewController.swift */,
 				06D5AE6A219A385600054883 /* Main.storyboard */,
 				06D5AE70219A385700054883 /* Assets.xcassets */,
 				06D5AE72219A385700054883 /* LaunchScreen.storyboard */,
@@ -65,6 +78,33 @@
 				06D5AE6D219A385600054883 /* MemorablePlaces.xcdatamodeld */,
 			);
 			path = MemorablePlaces;
+			sourceTree = "<group>";
+		};
+		06D5AE7B219A387F00054883 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06D5AE7E219A388100054883 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06D5AE80219A657C00054883 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06D5AE81219A659700054883 /* PlacesVC.swift */,
+				06D5AE68219A385600054883 /* ViewController.swift */,
+				06D6C977219B69CE00D37A79 /* PlacesCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		06D5AE83219A682400054883 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				06D5AE84219A683200054883 /* Constants.swift */,
+				06D5AE86219A924A00054883 /* PassingDate.swift */,
+			);
+			path = utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +139,14 @@
 				TargetAttributes = {
 					06D5AE62219A385600054883 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,9 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D5AE85219A683200054883 /* Constants.swift in Sources */,
+				06D5AE87219A924A00054883 /* PassingDate.swift in Sources */,
 				06D5AE69219A385600054883 /* ViewController.swift in Sources */,
 				06D5AE6F219A385600054883 /* MemorablePlaces.xcdatamodeld in Sources */,
+				06D5AE82219A659700054883 /* PlacesVC.swift in Sources */,
 				06D5AE67219A385600054883 /* AppDelegate.swift in Sources */,
+				06D6C978219B69CE00D37A79 /* PlacesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mostafa.MemorablePlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mostafa.MemorablePlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
