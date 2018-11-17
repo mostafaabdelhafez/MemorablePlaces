@@ -9,26 +9,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MemorablePlaces/utilities/Constants.swift"
-            timestampString = "563787474.24861"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MemorablePlaces/Controllers/PlacesVC.swift"
-            timestampString = "563851611.2495821"
+            timestampString = "564136370.3679121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "PlacesVC"
             landmarkType = "3">
             <Locations>
@@ -102,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemorablePlaces/Controllers/ViewController.swift"
-            timestampString = "563851611.250042"
+            timestampString = "564032315.627215"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -9,4 +9,5 @@
 import Foundation
 let TOMAP = "ToMap"
 let PLACES = "placename"
-let MapStoryBoard = "MapStoryBoard"
+let ADDSEGUE = "ToAddPlaces"
+let UNWIND = "unwind"

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06D5AE67219A385600054883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE66219A385600054883 /* AppDelegate.swift */; };
-		06D5AE69219A385600054883 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE68219A385600054883 /* ViewController.swift */; };
+		06D5AE69219A385600054883 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE68219A385600054883 /* MapViewController.swift */; };
 		06D5AE6C219A385600054883 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D5AE6A219A385600054883 /* Main.storyboard */; };
 		06D5AE6F219A385600054883 /* MemorablePlaces.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE6D219A385600054883 /* MemorablePlaces.xcdatamodeld */; };
 		06D5AE71219A385700054883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D5AE70219A385700054883 /* Assets.xcassets */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		06D5AE63219A385600054883 /* MemorablePlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemorablePlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D5AE66219A385600054883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06D5AE68219A385600054883 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06D5AE68219A385600054883 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		06D5AE6B219A385600054883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06D5AE6E219A385600054883 /* MemorablePlaces.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MemorablePlaces.xcdatamodel; sourceTree = "<group>"; };
 		06D5AE70219A385700054883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				06D5AE81219A659700054883 /* PlacesVC.swift */,
-				06D5AE68219A385600054883 /* ViewController.swift */,
+				06D5AE68219A385600054883 /* MapViewController.swift */,
 				06D6C977219B69CE00D37A79 /* PlacesCell.swift */,
 			);
 			path = Controllers;
@@ -188,7 +188,7 @@
 			files = (
 				06D5AE85219A683200054883 /* Constants.swift in Sources */,
 				06D5AE87219A924A00054883 /* PassingDate.swift in Sources */,
-				06D5AE69219A385600054883 /* ViewController.swift in Sources */,
+				06D5AE69219A385600054883 /* MapViewController.swift in Sources */,
 				06D5AE6F219A385600054883 /* MemorablePlaces.xcdatamodeld in Sources */,
 				06D5AE82219A659700054883 /* PlacesVC.swift in Sources */,
 				06D5AE67219A385600054883 /* AppDelegate.swift in Sources */,

@@ -9,21 +9,30 @@
 import UIKit
 import MapKit
 import CoreLocation
-class ViewController: UIViewController{
+class MapViewController: UIViewController{
     
     
     let locationmanager = CLLocationManager()
     var annotation:MKAnnotation!
     var AnnotationTitle:String?
     var TackPlaceInfo:Dictionary<String,String>?
-    var aNN:String?
+    var SavedAnnotation:CLLocationCoordinate2D?
+    var DropAnn:CLLocationCoordinate2D?
+    func PinSaveAnnotation(DropAnnotation:CLLocationCoordinate2D) {
+        let Annotation=MKPointAnnotation()
+        Annotation.coordinate = DropAnnotation
+        MapView.addAnnotation(Annotation)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let MapVC = segue.destination as! PlacesVC
+        if segue.identifier == UNWIND{
+        let PlacesVC = segue.destination as! PlacesVC
         if let placename=TackPlaceInfo{
-            print("Ann Bind")
             print(placename)
-            MapVC.name=placename
-            print(MapVC.name!,"name")
+            PlacesVC.name=placename
+            print(PlacesVC.name!,"name")
+            }
+            if let SavedAnn=SavedAnnotation {PlacesVC.SavedAnnotation=SavedAnn}
+
         }
     }
    
@@ -33,15 +42,20 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         locationmanager.delegate = self
         locationmanager.requestAlwaysAuthorization()
+        
         dropPin()
         
-        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        if let Dropann = DropAnn{
+            PinSaveAnnotation(DropAnnotation: Dropann)
+            print(Dropann)
+        }    }
 
 
 
 }
-extension ViewController:MKMapViewDelegate{
+extension MapViewController:MKMapViewDelegate{
     
     func dropPin()  {
     let TouchPoint = UILongPressGestureRecognizer(target: self, action:#selector(AddAnotation(TapOnTheMap:)))
@@ -50,7 +64,7 @@ extension ViewController:MKMapViewDelegate{
  
     }
 
-extension ViewController:CLLocationManagerDelegate{
+extension MapViewController:CLLocationManagerDelegate{
     
     
     @objc func AddAnotation(TapOnTheMap:UIGestureRecognizer){
@@ -69,11 +83,11 @@ extension ViewController:CLLocationManagerDelegate{
         
         let Annotation = MKPointAnnotation()
         Annotation.coordinate = Coordinate
+        SavedAnnotation = Coordinate
         if let annotation = AnnotationTitle {
-            aNN = annotation
             TackPlaceInfo = ["Name":"\(annotation)    \(Coordinate.latitude),\(Coordinate.longitude)"]
-     Annotation.title = annotation
-            MapView.addAnnotation(Annotation)
+        Annotation.title = annotation
+        MapView.addAnnotation(Annotation)
             
         }
         else {
