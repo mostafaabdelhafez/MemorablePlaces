@@ -15,14 +15,22 @@ class MapViewController: UIViewController{
     let locationmanager = CLLocationManager()
     var annotation:MKAnnotation!
     var AnnotationTitle:String?
+    var long:Double?
+    var lat:Double?
+    var recievelong:Double?
+    var recievelat:Double?
     var TackPlaceInfo:Dictionary<String,String>?
     var SavedAnnotation:CLLocationCoordinate2D?
     var DropAnn:CLLocationCoordinate2D?
-    func PinSaveAnnotation(DropAnnotation:CLLocationCoordinate2D) {
-        let Annotation=MKPointAnnotation()
-        Annotation.coordinate = DropAnnotation
+    func PinSavedAnn(longtude:Double,latitude:Double){
+        let Annotation = MKPointAnnotation()
+        let AnnotationCoord = CLLocationCoordinate2D(latitude:CLLocationDegrees(latitude), longitude:CLLocationDegrees(longtude))
+        Annotation.coordinate = AnnotationCoord
         MapView.addAnnotation(Annotation)
+        
     }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == UNWIND{
         let PlacesVC = segue.destination as! PlacesVC
@@ -31,8 +39,11 @@ class MapViewController: UIViewController{
             PlacesVC.name=placename
             print(PlacesVC.name!,"name")
             }
-            if let SavedAnn=SavedAnnotation {PlacesVC.SavedAnnotation=SavedAnn}
-
+            if let Savelongtude=long {PlacesVC.SaveLong = Savelongtude }
+            if let Savelatitude = lat {PlacesVC.SaveLat = Savelatitude}
+            
+//355431074093129
+            
         }
     }
    
@@ -47,10 +58,12 @@ class MapViewController: UIViewController{
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        if let Dropann = DropAnn{
-            PinSaveAnnotation(DropAnnotation: Dropann)
-            print(Dropann)
-        }    }
+        if let Long = recievelong{
+            if let Lat = recievelat{
+            PinSavedAnn(longtude: Long, latitude: Lat)
+            }}
+        
+    }
 
 
 
@@ -68,6 +81,7 @@ extension MapViewController:CLLocationManagerDelegate{
     
     
     @objc func AddAnotation(TapOnTheMap:UIGestureRecognizer){
+        if TapOnTheMap.state==UIGestureRecognizerState.began{
         let geoCoder = CLGeocoder()
         let Point = TapOnTheMap.location(in: MapView)
         let Coordinate = MapView.convert(Point, toCoordinateFrom: MapView)
@@ -77,18 +91,21 @@ extension MapViewController:CLLocationManagerDelegate{
             if let locationmark = self.placeMark?.addressDictionary!["Name"]{
                 
                 self.AnnotationTitle = locationmark as! String
-                
             }
-        }
+            
+            }
+        
         
         let Annotation = MKPointAnnotation()
         Annotation.coordinate = Coordinate
         SavedAnnotation = Coordinate
+        long = Coordinate.longitude
+        lat = Coordinate.latitude
+        print(lat,long)
         if let annotation = AnnotationTitle {
-            TackPlaceInfo = ["Name":"\(annotation)    \(Coordinate.latitude),\(Coordinate.longitude)"]
-        Annotation.title = annotation
+            TackPlaceInfo = ["Name":annotation]
         MapView.addAnnotation(Annotation)
-            
+            performSegue(withIdentifier: UNWIND, sender: self)
         }
         else {
             return
@@ -96,7 +113,7 @@ extension MapViewController:CLLocationManagerDelegate{
         }
         
         
-        
+        }
         
     }
         

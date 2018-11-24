@@ -34,15 +34,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="hty-9H-eOP">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="3Vo-zj-RN5">
-                            <connections>
-                                <segue destination="e0L-AD-jxB" kind="unwind" identifier="unwind" unwindAction="UnWindToPlacesVC:" id="xQC-vY-zHL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Map" id="hty-9H-eOP"/>
                     <connections>
                         <outlet property="MapView" destination="vu2-ZC-Hte" id="S41-od-Y4U"/>
+                        <segue destination="e0L-AD-jxB" kind="unwind" identifier="unwind" unwindAction="UnWindToPlacesVC:" id="avS-zk-eKH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,19 +80,19 @@
                     <navigationItem key="navigationItem" title="Places" id="p5R-Ke-UCJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="R4k-yg-xob">
                             <connections>
-                                <action selector="AddPlace:" destination="aX0-al-WXK" id="l3P-1K-cwA"/>
+                                <action selector="AddPlace:" destination="aX0-al-WXK" id="7no-wG-V7Q"/>
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="ToAddPlaces" id="cFS-cE-MNM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="TableView" destination="iKP-dA-jSo" id="kJX-LF-atz"/>
+                        <outlet property="TableView" destination="iKP-dA-jSo" id="bzp-YV-wZR"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="ToMap" id="BtD-SS-Wtu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gi-yY-eLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1554" y="-63"/>
+            <point key="canvasLocation" x="-908" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ugb-hT-5Yn">

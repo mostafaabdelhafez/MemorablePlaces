@@ -16,8 +16,6 @@
 		06D5AE7F219A388100054883 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D5AE7E219A388100054883 /* MapKit.framework */; };
 		06D5AE82219A659700054883 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE81219A659700054883 /* PlacesVC.swift */; };
 		06D5AE85219A683200054883 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE84219A683200054883 /* Constants.swift */; };
-		06D5AE87219A924A00054883 /* PassingDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AE86219A924A00054883 /* PassingDate.swift */; };
-		06D6C978219B69CE00D37A79 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6C977219B69CE00D37A79 /* PlacesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +30,6 @@
 		06D5AE7E219A388100054883 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		06D5AE81219A659700054883 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
 		06D5AE84219A683200054883 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		06D5AE86219A924A00054883 /* PassingDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassingDate.swift; sourceTree = "<group>"; };
-		06D6C977219B69CE00D37A79 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +89,6 @@
 			children = (
 				06D5AE81219A659700054883 /* PlacesVC.swift */,
 				06D5AE68219A385600054883 /* MapViewController.swift */,
-				06D6C977219B69CE00D37A79 /* PlacesCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				06D5AE84219A683200054883 /* Constants.swift */,
-				06D5AE86219A924A00054883 /* PassingDate.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -187,12 +181,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D5AE85219A683200054883 /* Constants.swift in Sources */,
-				06D5AE87219A924A00054883 /* PassingDate.swift in Sources */,
 				06D5AE69219A385600054883 /* MapViewController.swift in Sources */,
 				06D5AE6F219A385600054883 /* MemorablePlaces.xcdatamodeld in Sources */,
 				06D5AE82219A659700054883 /* PlacesVC.swift in Sources */,
 				06D5AE67219A385600054883 /* AppDelegate.swift in Sources */,
-				06D6C978219B69CE00D37A79 /* PlacesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
